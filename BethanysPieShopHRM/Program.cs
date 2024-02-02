@@ -1,6 +1,4 @@
-﻿
-
-using BethanysPieShopHRM;
+﻿using BethanysPieShopHRM.HR;
 
 Console.WriteLine("Creating a new employee");
 

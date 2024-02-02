@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BethanysPieShopHRM
+namespace BethanysPieShopHRM.HR
 {
     internal class Employee
     {
@@ -38,7 +38,7 @@ namespace BethanysPieShopHRM
 
         public void PerformWork()
         {
-            PerformWork(minimalHoursWorkedUnit); 
+            PerformWork(minimalHoursWorkedUnit);
             // Calling the function below as there is a arg entered to distinguish it from this function
         }
 
@@ -51,18 +51,19 @@ namespace BethanysPieShopHRM
 
         public double ReceiveWage(bool resetHours = true)
         {
-            if ( employeeType == EmployeeType.Manager )
+            if (employeeType == EmployeeType.Manager)
             {
                 Console.WriteLine($"An extra was added to the wage since {firstName} is a manager!");
                 wage = numberOfHoursWorked * hourlyRate * 1.25;
-            } else 
+            }
+            else
             {
                 wage = numberOfHoursWorked * hourlyRate;
             }
 
             Console.WriteLine($"{firstName} {lastName} has received a wage of {wage} hours(s) of work!");
 
-            if( resetHours )
+            if (resetHours)
             {
                 numberOfHoursWorked = 0;
             }
